@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
+var cors = require('cors')
 const morgan = require('morgan');
 const { post } = require('request');
 
 app.set('port', process.env.PORT || 3000);
+app.use(cors())
 
 // 
 app.use(require('./session'));
